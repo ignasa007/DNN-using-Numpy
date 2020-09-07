@@ -190,7 +190,7 @@ def model(X, Y, layersNodes, optimizer, lr, miniBatchSize, beta, beta1, beta2,  
         
         epochCost /= examples
 
-        if printCost and i%1==0:
+        if printCost and i%10==0:
             print ("Cost after epoch %i: %f" % (i, epochCost))
 
     return params
@@ -200,4 +200,4 @@ Y = ...
 
 layersNodes = [X.shape[0], 48, 12, Y.shape[0]]
 finalParams = model(X, Y, layersNodes, optimizer = "gd with momentum", lr = 0.1, miniBatchSize = 128, beta = 0.9, 
-                    beta1 = 0.9, beta2 = 0.999,  epsilon = 1e-8, numEpochs = 10, printCost = True)
+                    beta1 = 0.9, beta2 = 0.999,  epsilon = 1e-8, numEpochs = 100, printCost = True)

@@ -195,6 +195,9 @@ def model(X, Y, layersNodes, optimizer, lr, miniBatchSize, beta, beta1, beta2,  
 
     return params
 
+X = ...
+Y = ...
+
 layersNodes = [X.shape[0], 48, 12, Y.shape[0]]
 finalParams = model(X, Y, layersNodes, optimizer = "gd with momentum", lr = 0.1, miniBatchSize = 128, beta = 0.9, 
                     beta1 = 0.9, beta2 = 0.999,  epsilon = 1e-8, numEpochs = 10, printCost = True)
